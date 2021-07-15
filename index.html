@@ -1,0 +1,15 @@
+<form action="#" method="post">
+    <p> <input type="submit" name="action" value="Calculate - UI.Vision" />
+    <input type="submit" name="action" value="PyAutoGui" />
+    <input type="submit" name="action" value="Screenshot - UI.Vision" />
+    <input type="text" name="nm" />
+    <input type="submit" name="action" value="Post"/> </p>
+</form>
+
+{{s}}
+{% if request.method == 'POST' and request.form['action'] == 'Calculate - UI.Vision' or request.form['action'] == 'Screenshot - UI.Vision' %}
+        <button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Info_Run</button>
+<div id="spoiler" style="display:none">
+    {{y}}
+</div>
+{% endif %}
